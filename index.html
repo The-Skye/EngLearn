@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>English Learning</title>
+</head>
+<body>
+    <div class="choise-theme">
+        <form>
+            <div class="choise-theme-select">
+                <select name="theme" id="theme">
+                    <option value="none" disabled selected>--- Выберите тему ---</option>
+                    <option value="0">0. Все слова</option>
+                    <option value="1">1. Местоимения</option>
+                    <option value="2">2. Глагол To be</option>
+                    <option value="3">3. Национальности</option>
+                    <option value="4">4. Профессии</option>
+                    <option value="5">5. Числа от 1 до 100</option>
+                    <option value="6">6. Притяжательные местоимения</option>
+                    <option value="7">7. Семья</option>
+                </select>
+            </div>
+        </form>
+        <div class="iteration">
+            <div class="iteration-cont">
+                    <div class="iteration-input">
+                        <div class="label" style="display: none;">Осталось примеров:</div>
+                        <input type="number" name="iterations" id="iterations" placeholder="Кол-во примеров...">
+                        <input type="button" value="Подтвердить" id="btn-confirm">
+                    </div>
+                <div class="start" id="start" style="display: none;">Начать</div>
+            </div>
+        </div>
+    </div>
+    <div class="answer" style="display: none;">
+        <div class="answer-cont">
+            <div class="question" id="question">Тут будет вопрос</div>
+            
+            <div class="answer-input">
+                <div class="answer-input-container">
+                    <input type="text" name="answer" id="answer" placeholder="Введите ответ" onkeydown="console.log(entr(event));">
+                    <input type="button" value="ответить" id="btn">
+                </div>
+            </div>
+            
+            <div class="errors" id="errors">Ошибок: <span id="err"><span id="errors-cnt">0</span>/<span id="errors-max">...</span></span></div>
+            <div class="answer-block" id="answer-block">Правильный ответ: <span id="answer-eng"></span><span id="answer-ru"></span></div>
+            <div class="your-answer-block" id="your-answer-block">Ваш ответ: <span id="your-answer-eng"></span><span id="your-answer-ru"></span></div>
+            <div class="restart" id="restart" style="display: none;">Заново</div>
+        </div>
+    </div>
+    <script type="module" src="JS/imports.js"></script>
+    <script src="JS/variables.js"></script>
+    <script type="module" src="JS/btns.js"></script>
+    <script type="module" src="JS/funcs.js"></script>
+</body>
+</html>
